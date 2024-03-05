@@ -55,7 +55,7 @@
             <p *ngFor="let c of categorias">
                 {{ c.nombre }} => {{ c.id }}
              <button class="btn btn-primary"
-                      (click)="updateCategoria(c,99)">
+                      (click)="updateCategoriaID(c,99)">
                 Modificar a ID=99
               </button>
               <button class="btn btn-danger"
@@ -67,7 +67,16 @@
         <div class="col-4">
             <h1>Usuarios</h1>
             <p *ngFor="let u of usuarios">
-                {{ u.nombre }} => {{ u | json}}
+                {{ u.nombre }} => {{ u.passwd }}
+
+              <button class="btn btn-primary"
+                      (click)="updateContrasena(u, 1234)">
+                Cambiar contraseña
+              </button>
+              <button class="btn btn-danger"
+                      (click)="eliminarUsuario(u)">
+                X
+              </button>
             </p>
         </div>
     </div>

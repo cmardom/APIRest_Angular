@@ -55,8 +55,8 @@ export class AppComponent {
         this.categorias= (data as any));
     }
     getUsuarios() {
-      /*this.appService.getUsuarios().subscribe((data) =>
-        this.usuarios= (data as any));*/
+      this.appService.getUsuarios().subscribe((data) =>
+        this.usuarios= (data as any));
     }
     getProductosDesde(precio:number) {
       this.appService.getProductosDesde(precio).subscribe((data) =>
@@ -99,11 +99,23 @@ export class AppComponent {
         });
     }
 
-  updateCategoria(c: Categoria, id: number) {
+  updateCategoriaID(c: Categoria, id: number) {
     let copiaCategoria = { ...c };
     this.appService.updateCategoria(copiaCategoria).subscribe({
       next: (data) => {
         c.id = id;
+      },
+      error: error => {
+        this.setAviso('Error: No se ha podido actualizar');
+      }
+    });
+  }
+
+  updateContrasena(u: Usuario, pass: any) {
+    let copiaUsuario = { ...u };
+    this.appService.updateUsuario(copiaUsuario).subscribe({
+      next: (data) => {
+        u.passwd = pass;
       },
       error: error => {
         this.setAviso('Error: No se ha podido actualizar');
@@ -136,9 +148,26 @@ export class AppComponent {
         })});
 
   }
-    quitarDeProductos(p:Producto){
-      this.productos=this.productos.filter(x => x.id!=p.id)
-    }
+
+  eliminarUsuario(u:Usuario) {
+    this.appService.deleteUsuario(u.id).subscribe(
+      {next: (() => {
+          //console.log('eliminarProducto');
+          this.quitarDeUsuarios(u);
+        }),
+        error:  ((error:any) => {
+          //console.log('Error eliminar producto', error);
+          this.setAviso('Error al eliminar usuario.')
+        })});
+
+  }
+  quitarDeProductos(p:Producto){
+    this.productos=this.productos.filter(x => x.id!=p.id)
+  }
+
+  quitarDeUsuarios(u:Usuario){
+    this.usuarios=this.usuarios.filter(x => x.id!=u.id)
+  }
 
   quitarDeCategorias(c:Categoria){
     this.categorias=this.categorias.filter(x => x.id!=c.id)
