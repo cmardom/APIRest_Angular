@@ -53,7 +53,7 @@
         <div class="col-4">
             <h1>Categorías</h1>
             <p *ngFor="let c of categorias">
-                {{ c.nombre }} => {{ c | json}}
+                {{ c.nombre }} => {{ c.id }}
              <button class="btn btn-primary"
                       (click)="updateCategoria(c,99)">
                 Modificar a ID=99

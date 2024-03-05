@@ -99,18 +99,19 @@ export class AppComponent {
         });
     }
 
-  updateCategoria(c:Categoria, id:number) {
-    let copiaCategoria = {...c};
-    copiaCategoria.id = id;
+  updateCategoria(c: Categoria, id: number) {
+    let copiaCategoria = { ...c };
     this.appService.updateCategoria(copiaCategoria).subscribe({
-      next: (data) =>
-        c.id = id,
+      next: (data) => {
+        c.id = id;
+      },
       error: error => {
         this.setAviso('Error: No se ha podido actualizar');
       }
     });
   }
-    eliminarProducto(p:Producto) {
+
+  eliminarProducto(p:Producto) {
       this.appService.deleteProducto(p.id).subscribe(
         {next: (() => {
           //console.log('eliminarProducto');
