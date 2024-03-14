@@ -1,0 +1,55 @@
+{
+  "productos": [
+    {
+      "id": 8,
+      "nombre": "Regla",
+      "precio": 5,
+      "categoria": 3,
+      "inventario": 50
+    },
+    {
+      "id": 99,
+      "nombre": "ejemplo",
+      "precio": 88.88,
+      "categoria": 1
+    }
+  ],
+  "categorias": [
+    {
+      "id": 3,
+      "nombre": "Papelería"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Laura",
+      "resultado": [],
+      "passwd": "passwd"
+    },
+    {
+      "id": 2,
+      "nombre": "Carlos",
+      "resultado": [],
+      "passwd": "passwd"
+    },
+    {
+      "id": 3,
+      "nombre": "Juan",
+      "resultado": [],
+      "passwd": "passwd"
+    },
+    {
+      "id": 4,
+      "nombre": "Jose",
+      "resultado": [],
+      "passwd": "passwd"
+    },
+    {
+      "id": 5,
+      "nombre": "Miguel",
+      "resultado": [],
+      "passwd": "passwd"
+    }
+  ]
+}

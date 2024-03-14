@@ -1,0 +1,70 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Bolígrafo",
+      "precio": 2.5,
+      "categoria": 3,
+      "inventario": 100
+    },
+    {
+      "id": 2,
+      "nombre": "Martillo",
+      "precio": 5,
+      "categoria": 1,
+      "inventario": 15
+    },
+    {
+      "id": 5,
+      "nombre": "Destornillador",
+      "precio": 4.5,
+      "categoria": 1,
+      "inventario": 9
+    },
+    {
+      "id": 8,
+      "nombre": "Regla",
+      "precio": 5,
+      "categoria": 3,
+      "inventario": 50
+    }
+  ],
+  "categorias": [
+    { "id": 0, "nombre": "Sin categoría"},
+    { "id": 1, "nombre": "Ferretería"},
+    { "id": 2, "nombre": "Mobiliario"},
+    { "id": 3, "nombre": "Papelería"}
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Laura",
+      "resultado": [],
+      "passwd": "passwd"
+    },
+    {
+      "id": 2,
+      "nombre": "Carlos",
+      "resultado": [],
+      "passwd": "passwd"
+    },
+    {
+      "id": 3,
+      "nombre": "Juan",
+      "resultado": [],
+      "passwd": "passwd"
+    },
+    {
+      "id": 4,
+      "nombre": "Jose",
+      "resultado": [],
+      "passwd": "passwd"
+    },
+    {
+      "id": 5,
+      "nombre": "Miguel",
+      "resultado": [],
+      "passwd": "passwd"
+    }  
+  ]
+}
